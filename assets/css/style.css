@@ -762,7 +762,7 @@ article.container::before {
   */
  main{
   height:calc(100vh - 96px);
-  height(calc(100svh - 96px);
+  height:calc(100svh - 96px);
   }
   article.container{
     padding-block-start:0;
@@ -924,8 +924,28 @@ RESPONSIVE FOR LARGE THAN 1200PX SCREEN
   .forecast-card .title-2{
     --title-2: 2.2rem;
   }
+  .highlight-card:nth-child(-n+2){
+    height: 200px;
+  }
+  .highlight-card:nth-child(n+3){
+    height: 150px;
+  }
+  .highlight-card .m-icon{
+    font-size: 4.8rem;
+  }
+  .slider-list{
+    gap: 16px;
+  }
 }
 
+/* 
+RESPONSIDE FOR LARGE THAN 1400PX SCREEN
+*/
+@media (min-width: 1400px){
+  .highlight-list{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 
 
 
