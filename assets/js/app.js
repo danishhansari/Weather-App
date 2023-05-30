@@ -253,7 +253,7 @@ export const updateWeather = function (lat, lon) {
 
                     <div class="wrapper">
                         <span class="m-icon">airwave</span>
-                        <p class="title-1">${pressure}<sub>hPa</sub></p>
+                        <p class="title-1">${pressure}<sup>hPa</sup></p>
                     </div>
 
                 </div>
@@ -264,7 +264,7 @@ export const updateWeather = function (lat, lon) {
 
                     <div class="wrapper">
                         <span class="m-icon">visibility</span>
-                        <p class="title-1">${visibility / 1000}<sub>km</sub></p>
+                        <p class="title-1">${visibility / 1000}<sup>km</sup></p>
                     </div>
 
                 </div>
@@ -277,7 +277,7 @@ export const updateWeather = function (lat, lon) {
                         <span class="m-icon">thermostat</span>
                         <p class="title-1">${parseInt(
                           feels_like
-                        )}&deg;<sub>c</sub></p>
+                        )}&deg;<sup>c</sup></p>
                     </div>
 
                 </div>
@@ -316,7 +316,7 @@ export const updateWeather = function (lat, lon) {
                 <div class="card card-sm slider-card">
                 <p class="body-3">${module.getHours(dateTimeUnix, timezone)}</p>
                 <img src="./assets/images/weather_icons/${icon}.png" width="48" height="48" loading="lazy" alt="${description}" class="weather_icon" title="${description}">
-                <p class="body-3">${parseInt(temp)}&deg; </p>
+                <p class="body-3">${parseInt(temp)}&deg;</p>
                 </div>
                 `;
                 hourlySection.querySelector("[data-temp]").appendChild(tempLi);

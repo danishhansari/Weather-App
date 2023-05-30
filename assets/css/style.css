@@ -545,9 +545,7 @@ article.container::before {
 /*-----------------------------------*\
   #HOURLY FORECAST
 \*-----------------------------------*/
-.highlights .m-icon {
-  font-size: 3.2em;
-}
+.highlights .m-icon {  font-size: 3.2em; }
 
 .highlight-list {
   display: grid;
@@ -574,14 +572,15 @@ article.container::before {
   flex-grow: 1;
   row-gap: 8px;
 }
+
 .highlight-card .card-item {
   width: 50%;
   justify-content: flex-end;
   gap: 4px;
 }
-.highlight-card .label-1 {
-  color: var(--on-surface-variant);
-}
+
+.highlight-card .label-1 {  color: var(--on-surface-variant); }
+
 .badge {
   position: absolute;
   top: 16px;
@@ -616,9 +615,7 @@ article.container::before {
   flex-wrap: wrap;
   gap: 8px 16px;
 }
-.highlight-card.two .label-1 {
-  margin-block-end: 4px;
-}
+.highlight-card.two .label-1 {   margin-block-end: 4px; }
 
 /*-----------------------------------*\
   #FORECAST
@@ -683,8 +680,7 @@ article.container::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--background);
-  /* display: grid; */
+  background-color: var(--background); 
   place-items: center;
   z-index: 1;
   display: none;
@@ -757,8 +753,8 @@ article.container::before {
   .header-actions {
     gap:24px;
   }
-  .header .header-primary{
-    padding-inline:16px; 
+  .header .btn-primary{
+    padding-inline:16px 24px; 
   }
   .header .btn-primary .span{
     display:block;

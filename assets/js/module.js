@@ -39,15 +39,27 @@ export const getData = function (dateUnix, timezone){
     const monthName = monthNames[date.getUTCMonth()];
     return `${weekDayName} ${date.getUTCDate()}, ${monthName}`
 }
+// Param {number} dateUnix Unix date in sec
+// Param {number} timeZone Time 
+// Return  {string} Date String. Formate : "Sunday 10, Jan" 
 export const getTime = function (timeUnix, timezone){
     const date= new Date((timeUnix + timezone) * 1000);
     const hours = date.getUTCHours();
-    const minutes   = date.getUTCMinutes
-    const period = hours >= 12 ? "PM" : "AM"
+    const minutes   = date.getUTCMinutes();
+    const period = hours >= 12 ? "PM" : "AM";
 
-    return `${hours % 12 || 12}:${minutes} ${period}`
+    return `${hours % 12 || 12}:${minutes} ${period}`;
 }
+// Param {number} dateUnix Unix date in sec
+// Param {number} timeZone Time 
+// Return  {string} Date String. Formate : "Sunday 10, Jan" 
+export const getHours = function (timeUnix, timezone){
+    const date= new Date((timeUnix + timezone) * 1000);
+    const hours = date.getUTCHours();
+    const period = hours >= 12 ? "PM" : "AM";
 
+    return `${hours % 12 || 12} ${period}`;
+}
 // Param {mps}
 // return {Number} mph
 export const mps_to_kmh = mps => {

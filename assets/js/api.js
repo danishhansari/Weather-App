@@ -6,7 +6,7 @@
  * 
  */
 'use strict'
-const api_key = "a174b910a7d5f222f3ccea7a021b128c";
+const api_key = "a5a2f7fbd1be281ae1365d6761b26c13";
 
 // Fetch Data from Server
 // @param {string} URL API url
