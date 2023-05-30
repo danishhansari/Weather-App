@@ -520,7 +520,6 @@ article.container::before {
 .forecast-card .title-2 {
   margin-block-end: 0;
 }
-
 .forecast-card :is(.card-item, .icon-wrapper) {
   display: flex;
   align-items: center;

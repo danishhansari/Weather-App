@@ -33,7 +33,7 @@ const searchTimeoutDuration = 500;
 searchField.addEventListener("input", function () {
   searchTimeout ?? clearTimeout(searchTimeout);
 
-  if (searchField.value) {
+  if (searchField.value) { 
     searchResult.classList.remove("active");
     searchResult.innerHTML = "";
     searchField.classList.remove("searching");
@@ -170,7 +170,7 @@ export const updateWeather = function (lat, lon) {
 
             <div class="highlight-list">
 
-                <div class="card card-sm highlight-card one">
+                <div class="card card-sm highlight-card  one">
                     <h3 class="title-3">Air Quality Index</h3>
                     <div class="wrapper">
                         <span class="m-icon">air</span>
@@ -283,10 +283,11 @@ export const updateWeather = function (lat, lon) {
       highlightSection.appendChild(card);
     });
 
+    // 5 Days forecast 
     fetchData(url.forecast(lat, lon), function (forecast) {
       const {
         list: forecastList,
-        city: { timezone },
+        city: { timezone }
       } = forecast;
 
       hourlySection.innerHTML = `
@@ -327,12 +328,12 @@ export const updateWeather = function (lat, lon) {
         <p class="body-3">${parseInt(module.mps_to_kmh(windSpeed))}</p>
         </div>
         `;
-        hourlySection.querySelector("[data-wind]").appendChild(windLi)
+        hourlySection.querySelector("[data-wind]").appendChild(windLi); 
       }
 
-    //   5 DAYS FORECAST SECTION
+    //   5   DAYS FORECAST SECTION
     forecastSection.innerHTML = `
-    <h2 class="title-2" id="forecast-card">5 Days Forecast</h2>
+    <h2 class="title-2" id="forecast-label ">5 Days Forecast</h2>
     <div class="card card-lg forecast-card">
         <ul data-forecast-list></ul>
     </div>
@@ -353,7 +354,7 @@ export const updateWeather = function (lat, lon) {
          <img src="./assets/images/weather_icons/${icon}.png" alt="Overcast Clouds" width="36"
              height="36" class="weather-icon" alt="${description}" title="${description}">
          <span class="span">
-             <p class="title-2">${parseInt(temp_max)}$deg;</p>
+             <p class="title-2">${parseInt(temp_max)}&deg;</p>
          </span>
      </div>
      <p class="label-1">${date.getDate()} ${module.monthNames[date.getMonth()]}</p>
