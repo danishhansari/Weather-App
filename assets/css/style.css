@@ -898,7 +898,7 @@ RESPONSIVE FOR LARGE THAN 1200PX SCREEN
     border-block-start: 1px solid var(--outline);
     overflow-y:auto;
     overflow-y:overlay;
-  }
+  } 
   .search-view .view-list:empty{
     min-height: 120px;
   }
