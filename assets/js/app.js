@@ -261,7 +261,7 @@ export const updateWeather = function (lat, lon) {
 
                     <div class="wrapper">
                         <span class="m-icon">visibility</span>
-                        <p class="title-1">${parseInt(visibility)/1000}<sup>km</sup></p>
+                        <p class="title-1">${visibility/1000}<sup>km</sup></p>
                     </div>
 
                 </div>
