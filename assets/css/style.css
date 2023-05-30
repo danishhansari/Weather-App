@@ -109,15 +109,15 @@ button {
 }
 input,
 button {
-  background-color: transparent;
+  background-color: none;
   color: inherit;
   border: none;
+  font: inherit;
 }
 img {
   height: auto;
 }
 input {
-  outline: none;
   width: 100%;
 }
 button {
@@ -126,7 +126,7 @@ button {
 sub {
   vertical-align: baseline;
 }
-sub {
+sup {
   vertical-align: top;
 }
 sub,
@@ -184,6 +184,7 @@ body {
   -webkit-font-feature-settings: "liga";
   -webkit-font-smoothing: antialised;
   height: 1em;
+  width: 1em;
   overflow: hidden;
 }
 
@@ -392,6 +393,7 @@ body {
   line-height: 80px;
   padding-inline: 56px 16px;
   outline: none;
+  background: transparent;
 }
 
 .search-field::placeholder {
@@ -482,7 +484,7 @@ article.container::before {
 /*-----------------------------------*\
   #CURRENT WEATHER
 \*-----------------------------------*/
-.current-weather-card .wrapper {
+.current-weather-card .weapper {
   margin-block: 12px;
   display: flex;
   gap: 8px;
@@ -502,7 +504,7 @@ article.container::before {
 }
 .current-weather-card .meta-item {
   display: flex;
-  align-items: center;
+  align-items: center; 
   gap: 8px;
 }
 .current-weather-card .meta-item:not(:last-child) {

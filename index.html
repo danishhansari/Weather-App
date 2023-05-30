@@ -11,7 +11,7 @@
     <!-- 
         Favicon Icon
      -->
-    <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
     <!-- 
         Fonts
       -->
@@ -40,7 +40,8 @@
 
                 <div class="search-wrapper">
                     <input type="search" name="search" placeholder="Search city..." autocomplete="off"
-                        class-field="search-field" data-search-field>
+                        class="search-field" data-search-field>
+
                     <span class="m-icon">search</span>
 
                     <button class="icon-btn leading-icon has-state" aria-label="close search" data-search-toggler>
@@ -48,32 +49,30 @@
                     </button>
                 </div>
 
-                <div class="search-result" data-search-result>
-                   
-                </div>
-            </div>
+            <div class="search-result" data-search-result></div>
+        </div>
 
-            <div class="header-actions">
-                <button class="icon-btn has-state" aria-label="open search" data-search-toggler>
-                    <span class="m-icon icon">search</span>
-                </button>
-                <a href="#/current-location" class="btn-primary has-state" data-current-location-btn>
-                    <span class="m-icon">my_location</span>
-                    <span class="span">Current Location</span>
-                </a>
-            </div>
+        <div class="header-actions">
+            <button class="icon-btn has-state" aria-label="open search" data-search-toggler>
+                <span class="m-icon icon">search</span>
+            </button>
+            <a href="#/current-location" class="btn-primary has-state" data-current-location-btn>
+                <span class="m-icon">my_location</span>
+                <span class="span">Current Location</span>
+            </a>
+        </div>
         </div>
     </header>
+
 
     <main>
         <article class="container" data-container>
             <div class="content-left">
-
                 <!-- 
                     #CURRENT WEATHER
                  -->
                 <section class="section current-weather" aria-label="current weather" data-current-weather>
-                    
+
                 </section>
 
                 <!-- 
@@ -90,7 +89,7 @@
                     #HIGHLIGHTGS
                  -->
                 <section class="section highlights" aria-labelledby="highlights-label" data-highlights>
-                    
+
                 </section>
 
 
@@ -99,12 +98,14 @@
                 <footer class="footer">
                     <p class="body-3">Copyright 2023 Danish, All Rights Reserved</p>
                     <p class="body-3">
-                        Powered by <a href="https://openweathermap.org/api" title="free Openweather Api" target="_blank" rel="noopener">
-                            <img src="./asssets/images/openweather.png" width="150" height="30" loading="lazy" alt="OpenWeather">
+                        Powered by <a href="https://openweathermap.org/api" title="free Openweather Api" target="_blank"
+                            rel="noopener">
+                            <img src="./asssets/images/openweather.png" width="150" height="30" loading="lazy"
+                                alt="OpenWeather">
                         </a>
                     </p>
                 </footer>
-    
+
             </div>
 
 

@@ -130,7 +130,7 @@ export const updateWeather = function (lat, lon) {
 
     card.innerHTML = `
         <h2 class="title-2 card-title">Now</h2>
-        <div class="wrappper">
+        <div class="weappper">
             <p class="heading">${parseInt(temp)}<sup>c</sup></p>
             <img src="./assets/images/weather_icons/${icon}.png" alt="${description}" width="64"
                 height="64" class="weather-icon">
