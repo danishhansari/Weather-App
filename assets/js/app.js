@@ -22,7 +22,7 @@ const searchTogglers = document.querySelectorAll("[data-search-toggler]");
 
 const toggleSearch = () => searchView.classList.toggle("active");
 addEventOnElements(searchTogglers, "click", toggleSearch);
-
+  
 // search integration
 
 const searchField = document.querySelector("[data-search-field]");
@@ -47,11 +47,7 @@ searchField.addEventListener("input", function () {
         searchField.classList.remove("searching");
         searchResult.classList.add("active");
         searchResult.innerHTML = `
-                <ul class="view-list" data-search-list>
-                <li class="view-item">
-                
-                </li>
-            </ul>
+                <ul class="view-list" data-search-list></ul>
                 `;
         // NodeList
         const items = [];
@@ -116,12 +112,14 @@ export const updateWeather = function (lat, lon) {
     currentLocationBtn.removeAttribute("disabled");
   }
 
+  // CURRENT WEATHER SECTION 
   fetchData(url.currentWeather(lat, lon), function (currentWeather) {
     const {
       weather,
       dt: dateUnix,
       sys: { sunrise: sunriseUnixUTC, sunset: sunsetUnixUTC },
-      main: { temp, feels_like, pressure, humidity, visibility, timezone },
+      main: { temp, feels_like, pressure, humidity}, visibility,
+      timezone
     } = currentWeather;
     const [{ description, icon }] = weather;
 
@@ -141,8 +139,7 @@ export const updateWeather = function (lat, lon) {
                 <span class="m-icon">calendar_today</span>
                 <p class="title-3 meta-text">${module.getData(
                   dateUnix,
-                  timezone
-                )}</p>
+                  timezone)}</p>
             </li>
             <li class="meta-item">
                 <span class="m-icon">location_on</span>
@@ -264,7 +261,7 @@ export const updateWeather = function (lat, lon) {
 
                     <div class="wrapper">
                         <span class="m-icon">visibility</span>
-                        <p class="title-1">${visibility / 1000}<sup>km</sup></p>
+                        <p class="title-1">${parseInt(visibility)/1000}<sup>km</sup></p>
                     </div>
 
                 </div>
